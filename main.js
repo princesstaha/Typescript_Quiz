@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
 console.log(chalk.greenBright("Welcome to Quiz Game"));
@@ -47,7 +48,7 @@ async function startQuiz() {
             answer: "Quaid-e-Azam"
         }, {
             question: "What is the National Drink of pakistan",
-            choices: ["Mango juice", "Sugarcane juice ", "Orange juice"],
+            choices: ["Mango juice", "Sugarcane juice", "Orange juice"],
             answer: "Sugarcane juice"
         }
     ];
@@ -71,9 +72,9 @@ async function startQuiz() {
         }
         else {
             console.log(chalk.red("Incorrect!"));
-            console.log(chalk.yellow(`The correct answer is : ${chalk.green(answer)}.`));
+            console.log(chalk.yellow(`The correct answer is : ${chalk.green(answer)}`));
         }
     }
-    console.log(chalk.yellow(`Quiz Completed ! Your score :${score}/${questions.length} and Thans For Playing.`));
+    console.log(chalk.yellow(`Quiz Completed ! Your score :${score}/${questions.length} and Thanks For Playing.`));
 }
 startQuiz();

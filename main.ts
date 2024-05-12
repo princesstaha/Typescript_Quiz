@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import  inquirer from "inquirer";
 import chalk from "chalk";
 
@@ -52,7 +54,7 @@ answer : "Lady Finger"
     answer :"Quaid-e-Azam"
 },{
     question : "What is the National Drink of pakistan",
-    choices: ["Mango juice","Sugarcane juice ","Orange juice"],
+    choices: ["Mango juice","Sugarcane juice","Orange juice"],
     answer: "Sugarcane juice"
 }
 ];
@@ -77,9 +79,9 @@ for (const {question , choices , answer } of questions){
             score++;
 }else {
     console.log (chalk.red("Incorrect!"));
-    console.log(chalk.yellow(`The correct answer is : ${chalk.green(answer)}.`));
+    console.log(chalk.yellow(`The correct answer is : ${chalk.green(answer)}`));
 }
 }
-console.log(chalk.yellow(`Quiz Completed ! Your score :${score}/${questions.length} and Thans For Playing.`));
+console.log(chalk.yellow(`Quiz Completed ! Your score :${score}/${questions.length} and Thanks For Playing.`));
 }
 startQuiz();
